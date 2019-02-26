@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+<title>Koreus Image</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+.w3-sidebar a {font-family: "Roboto", sans-serif}s
+body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
+</style>
+<body class="w3-content" style="max-width:1200px">
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-bar-block w3-white w3-collapse w3-top" style="z-index:3;width:250px" id="mySidebar">
+  <div class="w3-container w3-display-container w3-padding-16" >
+    <i onclick="w3_close()" class="fa fa-remove w3-hide-large w3-button w3-display-topright"></i>
+    <h3 class="w3-wide"><b>KOREUS IMAGE</b></h3>
+  </div>
+  <div class="w3-padding-64 w3-large w3-text-grey" style="font-weight:bold">
+    <a href="chandung.html" class="w3-bar-item w3-button">Chân Dung</a>
+    <a href="doan.html" class="w3-bar-item w3-button">Đồ Ăn</a>
+    
+    <a onclick="myAccFunc()" href="javascript:void(0)" class="w3-bar-item w3-button" id="myBtn">
+      Phong Cảnh <i class="fa fa-caret-down"></i>
+    </a>
+    <div id="demoAcc" class="w3-bar-block w3-hide w3-padding-large w3-medium">
+      <a href="hanoi.html" class="w3-bar-item w3-button">Hà Nội</a>
+      <a href="saigon.html" class="w3-bar-item w3-button">Sài Gòn</a>
+    </div>
+    <a href="kientruc.html" class="w3-bar-item w3-button w3-light-grey"><i class="w3-bar-item w3-button"></i>Kiến Trúc</a>
+    <a href="bongda.html" class="w3-bar-item w3-button">Bóng Đá</a>
+  </div>
+  <a href="#footer" class="w3-bar-item w3-button w3-padding">Liên hệ</a> 
+  <a href="javascript:void(0)" class="w3-bar-item w3-button w3-padding" onclick="document.getElementById('newsletter').style.display='block'">Nhận thông báo</a> 
+</nav>
+
+<!-- Top menu on small screens -->
+<header class="w3-bar w3-top w3-hide-large w3-black w3-xlarge">
+  <div class="w3-bar-item w3-padding-24 w3-wide">KOREUS IMAGE</div>
+  <a href="javascript:void(0)" class="w3-bar-item w3-button w3-padding-24 w3-right" onclick="w3_open()"><i class="fa fa-bars"></i></a>
+</header>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:250px">
+
+  <!-- Push down content on small screens -->
+  <div class="w3-hide-large" style="margin-top:83px"></div>
+  
+  <!-- Top header -->
+  <header class="w3-container w3-xlarge">
+    <p class="w3-left">Kiến Trúc</p>
+    <p class="w3-right">
+      <i class="fa fa-shopping-cart w3-margin-right"></i>
+      <i class="fa fa-search"></i>
+    </p>
+  </header>
+
+  <!-- Image header -->
+  <div class="w3-display-container w3-container">
+    <img src="kientruc.jpg" alt="Phong Cảnh" style="width:100%">
+    <div class="w3-display-topleft w3-text-white" style="padding:24px 48px">
+      <h1 class="w3-jumbo w3-hide-small">Machu Picchu</h1>
+      <h1 class="w3-hide-large w3-hide-medium">Machu Picchu</h1>
+      <h1 class="w3-hide-small">Beautiful View</h1>
+      <p><a href="#" class="w3-button w3-black w3-padding-large w3-large">Mua ngay</a></p>
+    </div>
+  </div>
+
+  <div class="w3-container w3-text-grey" id="Phong Cảnh">
+    <p>8 Famous Architectures</p>
+  </div>
+
+  <!-- Product grid -->
+  <div class="w3-row w3-scale">
+    <div class="w3-col l3 s6">
+      <div class="w3-container">
+         <div class="w3-display-container">
+          <img src="thunglung.jpg" style="width:100%">
+          <div class="w3-display-middle w3-display-hover">
+            <button class="w3-button w3-black">Mua Ngay <i class="fa fa-shopping-cart"></i></button>
+          </div>
+        </div>
+        <p>Thung Lũng Tình Yêu<br><b>25.000đ</b></p>
+      </div>
+      <div class="w3-container">
+        <div class="w3-display-container">
+          <img src="kimtuthap.jpg" style="width:100%">
+          <div class="w3-display-middle w3-display-hover">
+            <button class="w3-button w3-black">Mua Ngay <i class="fa fa-shopping-cart"></i></button>
+          </div>
+			</div>
+        <p>Kim Tự Tháp Kheops<br><b>25.000đ</b></p>
+      </div>
+    </div>
+
+    <div class="w3-col l3 s6">
+      <div class="w3-container">
+        <div class="w3-display-container">
+          <img src="nhathohoigiao.jpg" style="width:100%">
+          <span class="w3-tag w3-display-topleft">Premium</span>
+          <div class="w3-display-middle w3-display-hover">
+            <button class="w3-button w3-black">Mua Ngay <i class="fa fa-shopping-cart"></i></button>
+          </div>
+        </div>
+        <p>Nhà Thờ Sheikh Zayed<br><b>25.000đ</b></p>
+      </div>
+      <div class="w3-container">
+         <div class="w3-display-container">
+          <img src="langmo.jpg" style="width:100%">
+          <div class="w3-display-middle w3-display-hover">
+            <button class="w3-button w3-black">Mua Ngay <i class="fa fa-shopping-cart"></i></button>
+          </div>
+			</div>
+        <p>Lăng Mộ Mausolus<br><b>30.000đ</b></p>
+      </div>
+    </div>
+
+    <div class="w3-col l3 s6">
+      <div class="w3-container">
+      <div class="w3-display-container">
+          <img src="vuontreo.jpg" style="width:100%">
+          <div class="w3-display-middle w3-display-hover">
+            <button class="w3-button w3-black">Mua Ngay <i class="fa fa-shopping-cart"></i></button>
+          </div>
+			</div>
+        <p>Vườn Treo Babylon<br><b>20.000đ</b></p>
+      </div>
+      <div class="w3-container">
+        <div class="w3-display-container">
+          <img src="denartemis.jpg" style="width:100%">
+          <span class="w3-tag w3-display-topleft">Giảm giá</span>
+          <div class="w3-display-middle w3-display-hover">
+            <button class="w3-button w3-black">Mua Ngay <i class="fa fa-shopping-cart"></i></button>
+          </div>
+        </div>
+        <p>Đền Artemis<br><b class="w3-text-red">25.000đ</b></p>
+      </div>
+    </div>
+
+    <div class="w3-col l3 s6">
+      <div class="w3-container">
+        <div class="w3-display-container">
+          <img src="caucongvang.jpg" style="width:100%">
+          <div class="w3-display-middle w3-display-hover">
+            <button class="w3-button w3-black">Mua Ngay <i class="fa fa-shopping-cart"></i></button>
+          </div>
+			</div>
+        <p>Cầu Cổng Vàng<br><b>30.000đ</b></p>
+      </div>
+      <div class="w3-container">
+      <div class="w3-display-container">
+          <img src="daituongniem.jpg" style="width:100%">
+          <div class="w3-display-middle w3-display-hover">
+            <button class="w3-button w3-black">Mua Ngay <i class="fa fa-shopping-cart"></i></button>
+          </div>
+			</div>
+        <p>Đài Tưởng Niệm Newgrange<br><b>25.000đ</b></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Subscribe section -->
+  <div class="w3-container w3-black w3-padding-32">
+    <h1>Đăng Ký</h1>
+    <p>Để nhận những ưu đãi đặc biệt và quyền lợi VIP:</p>
+    <p><input class="w3-input w3-border" type="text" placeholder="Nhập Email" style="width:100%"></p>
+    <button type="button" class="w3-button w3-red w3-margin-bottom">Đăng Ký</button>
+  </div>
+  
+  <!-- Footer -->
+  <footer class="w3-padding-64 w3-light-grey w3-small w3-center" id="footer">
+    <div class="w3-row-padding">
+      <div class="w3-col s4">
+        <h4>Liên Lạc</h4>
+        <p>Câu hỏi? Lên đầu trang.</p>
+        <form action="/action_page.php" target="_blank">
+          <p><input class="w3-input w3-border" type="text" placeholder="Name" name="Name" required></p>
+          <p><input class="w3-input w3-border" type="text" placeholder="Email" name="Email" required></p>
+          <p><input class="w3-input w3-border" type="text" placeholder="Subject" name="Subject" required></p>
+          <p><input class="w3-input w3-border" type="text" placeholder="Message" name="Message" required></p>
+          <button type="submit" class="w3-button w3-block w3-black">Send</button>
+        </form>
+      </div>
+
+      <div class="w3-col s4">
+        <h4>About</h4>
+        <p><a href="thongtin.html">Thông tin</a></p>
+        <p><a href="tuyendung.html">Tuyển dụng</a></p>
+        <p><a href="hotro.html">Hỗ trợ</a></p>
+        <p><a href="thanhtoan.html">Thanh Toán</a></p>
+      
+      </div>
+
+      <div class="w3-col s4 w3-justify">
+        <h4>Store</h4>
+        <p><i class="fa fa-fw fa-map-marker"></i> IMAGE KOREUS</p>
+        <p><i class="fa fa-fw fa-phone"></i> 0334915259</p>
+        <p><i class="fa fa-fw fa-envelope"></i> thinh.nq16@gmail.com</p>
+        <h4>Chúng tôi thanh toán bằng</h4>
+        <p><i class="fa fa-fw fa-credit-card"></i> ATM Card: 108002541482 - NGUYEN QUANG THINH - VietinBank Hai Ba Trung </p>
+        <br>
+        <a href="https://www.facebook.com/keniver.eternality" class="fa fa-facebook-official w3-hover-opacity w3-large" target="_blank"></a>
+        <a href="https://www.instagram.com/__january_16th/" class="fa fa-instagram w3-hover-opacity w3-large" target="_blank"></a>
+        <a href="https://www.pinterest.com" class="fa fa-pinterest-p w3-hover-opacity w3-large" target="_blank"></a>
+        <a href="https://twitter.com/_January_16th_"class="fa fa-twitter w3-hover-opacity w3-large" target="_blank"></a>       
+      </div> 
+    </div>
+  </footer>
+
+
+
+  <!-- End page content -->
+</div>
+
+<!-- Newsletter Modal -->
+<div id="newsletter" class="w3-modal">
+  <div class="w3-modal-content w3-animate-zoom" style="padding:32px">
+    <div class="w3-container w3-white w3-center">
+      <i onclick="document.getElementById('newsletter').style.display='none'" class="fa fa-remove w3-right w3-button w3-transparent w3-xxlarge"></i>
+      <h2 class="w3-wide">Nhận thông tin</h2>
+      <p>Tham gia vào nhóm để nhận thông tin và các ưu đãi đặc biệt.</p>
+      <p><input class="w3-input w3-border" type="text" placeholder="Enter e-mail"></p>
+      <button type="button" class="w3-button w3-padding-large w3-red w3-margin-bottom" onclick="document.getElementById('newsletter').style.display='none'">Theo Dõi</button>
+    </div>
+  </div>
+</div>
+
+<script>
+// Accordion 
+function myAccFunc() {
+    var x = document.getElementById("demoAcc");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else {
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
+
+// Click on the "Kiến Trúc" link on page load to open the accordion for demo purposes
+document.getElementById("myBtn").click();
+
+
+// Script to open and close sidebar
+function w3_open() {
+    document.getElementById("mySidebar").style.display = "block";
+    document.getElementById("myOverlay").style.display = "block";
+}
+ 
+function w3_close() {
+    document.getElementById("mySidebar").style.display = "none";
+    document.getElementById("myOverlay").style.display = "none";
+}
+</script>
+
+</body>
+</html>
+
+
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Untitled Document</title>
+</head>
+
+<body>
+</body>
+</html>
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Untitled Document</title>
+</head>
+
+<body>
+</body>
+</html>
